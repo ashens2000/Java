@@ -1,6 +1,6 @@
 public class goldenretriever extends dog{
     public goldenretriever(){
-        name="debbie";
+        name="Debbie";
     }
     @Override
     void bark() {

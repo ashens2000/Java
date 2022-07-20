@@ -4,9 +4,9 @@ public class cache {
 
     private static Hashtable<String, dog> shapeMap  = new Hashtable<String, dog>();
 
-    public static dog getDog(String shapeId) {
-        Shape cachedShape = shapeMap.get(shapeId);
-        return (Shape) cachedShape.clone();
+    public static dog getDog(String name) {
+        dog cacheddog = shapeMap.get(name);
+        return (dog) cacheddog.clone();
     }
 
     // for each shape run database query and create shape
@@ -14,16 +14,16 @@ public class cache {
     // for example, we are adding three shapes
 
     public static void loadCache() {
-        Circle circle = new Circle();
-        circle.setId("1");
-        shapeMap.put(circle.getId(),circle);
+        Husky husky = new Husky();
+        husky.setColor("White");
+        shapeMap.put(husky.getName(),husky);
 
-        Square square = new Square();
-        square.setId("2");
-        shapeMap.put(square.getId(),square);
+        dobberman dobberMan = new dobberman();
+        dobberMan.setColor("Black");
+        shapeMap.put(dobberMan.getName(),dobberMan);
 
-        Rectangle rectangle = new Rectangle();
-        rectangle.setId("3");
-        shapeMap.put(rectangle.getId(), rectangle);
+        goldenretriever gr = new goldenretriever();
+        gr.setColor("Brown");
+        shapeMap.put(gr.getName(),gr);
     }
 }
